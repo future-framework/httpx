@@ -1,5 +1,5 @@
-# AWS experiment: one spot machine per job, no fan-out. encode/httpx's test-suite.yml: tests (python-version 3.13, ubuntu-latest), for the Superaction scoreboard.
-name: Superaction (AWS)
+# encode/httpx's test-suite.yml: tests (python-version 3.13, ubuntu-latest), for the SuperCI scoreboard.
+name: SuperCI (GitHub)
 
 on:
   workflow_dispatch: {}
@@ -9,8 +9,8 @@ permissions:
 
 jobs:
   test:
-    name: test / superaction-aws
-    runs-on: superaction-aws
+    name: test / github
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: "actions/checkout@v4"
